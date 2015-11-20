@@ -1,0 +1,22 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: $blue;
+  color: $base-font-color;
+}
+
+#container {
+  @include display(flex);
+  @include flex-direction(column);
+  @include align-items(center);
+  @include justify-content(center);
+  height: 100vh;
+}
+
+.box {
+  width: 80%;
+  text-align: center; /* will center <p> text, which is not a flex item */
+  // border: 1px solid white;
+}
