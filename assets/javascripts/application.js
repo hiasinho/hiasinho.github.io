@@ -9233,6 +9233,7 @@ return jQuery;
       });
     });
     return $('a.social[title=Mail]').on('click', function(ev) {
+      ev.preventDefault();
       return require(["mojo/signup-forms/Loader"], function(L) {
         return L.start({
           baseUrl: "mc.us4.list-manage.com",
