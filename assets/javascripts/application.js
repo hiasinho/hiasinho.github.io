@@ -9234,13 +9234,7 @@ return jQuery;
     });
     return $('a.social[title=Mail]').on('click', function(ev) {
       ev.preventDefault();
-      return require(["mojo/signup-forms/Loader"], function(L) {
-        return L.start({
-          baseUrl: "mc.us4.list-manage.com",
-          uuid: "de54ba8bdc45ee5a5ce01c56f",
-          lid: "5fad95f042"
-        });
-      });
+      return $('.box-email').show().addClass('fadeInUp');
     });
   });
 
