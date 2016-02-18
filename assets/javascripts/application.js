@@ -9227,9 +9227,18 @@ return jQuery;
         }
       }
     });
-    return $('a.social').on('click', function(ev) {
+    $('a.social').on('click', function(ev) {
       return mixpanel.track("Clicked Social Link", {
         target: this.title
+      });
+    });
+    return $('a.social[title=Mail]').on('click', function(ev) {
+      return require(["mojo/signup-forms/Loader"], function(L) {
+        return L.start({
+          baseUrl: "mc.us4.list-manage.com",
+          uuid: "de54ba8bdc45ee5a5ce01c56f",
+          lid: "5fad95f042"
+        });
       });
     });
   });
